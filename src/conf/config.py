@@ -2,22 +2,23 @@ from pydantic_settings import BaseSettings
 
 class Settings(BaseSettings):
     sqlalchemy_database_url: str = 'postgresql+psycopg2://user:password@localhost:5432/postgres'
-    postgres_user: str
-    postgres_password: str
-    postgres_port: str
-    postgres_db: str
-    secret_key: str
-    algorithm: str
-    mail_username: str
-    mail_password: str
-    mail_from: str
-    mail_port: int
-    mail_server: str
-    redis_host: str = 'localhost'
-    redis_port: int = 6379
-    cloudinary_name: str
-    cloudinary_api_key: int
-    cloudinary_api_secret: str
+    postgres_user: str = 'POSTGRES_USER'
+    postgres_password: str = 'POSTGRES_PASSWORD'
+    postgres_host: str = 'POSTGRES_HOST'
+    postgres_db: str = 'POSTGRES_DB'
+    secret_key: str = 'SECRET_KEY'
+    algorithm: str = 'ALGORITHM'
+    mail_username: str = 'MAIL_USERNAME'
+    mail_password: str = 'MAIL_PASSWORD'
+    mail_from: str = 'JOHN.DOE@EXAMPLE.COM'
+    mail_port: int = 0
+    mail_server: str = 'MAIL_SERVER'
+    redis_host: str = 'REDIS_HOST'
+    redis_port: int = 0
+    cloudinary_name: str = 'CLOUDINARY_NAME'
+    cloudinary_api_key: int = 0
+    cloudinary_api_secret: str = 'CLOUDINARY_API_SECRET'
+    pythonpath: str = 'PYTHONPATH'
 
     class Config:
         env_file = ".env"

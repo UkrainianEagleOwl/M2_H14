@@ -23,6 +23,21 @@ conf = ConnectionConfig(
 
 
 async def send_email(email: EmailStr, username: str, host: str):
+    """
+    The send_email function sends an email to the user with a link to confirm their email address.
+
+    The function takes in three arguments:
+        - email: the user's email address, which is used as a unique identifier for each account.
+        - username: the username of the account that was just created. This is displayed in
+        the confirmation message sent to them via email.
+        - host: this is used as part of the URL that will be sent out in order for users to confirm their accounts.
+
+    :param email: EmailStr: Check if the email is a valid email address.
+    :param username: str: Get the username of the user.
+    :param host: str: Pass the host name of your website to the email template.
+
+    :return: A coroutine object
+    """
     try:
         token_verification = auth_service.create_email_token({"sub": email})
         message = MessageSchema(
