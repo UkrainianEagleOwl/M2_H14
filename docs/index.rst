@@ -83,6 +83,22 @@ REST API service Email
   :show-inheritance:
 
 
+REST API tests repository Contacts
+==================================
+.. automodule:: tests.test_unit_repository_contacts
+  :members:
+  :undoc-members:
+  :show-inheritance:
+
+
+REST API tests repository Users
+==================================
+.. automodule:: tests.test_unit_repository_users
+  :members:
+  :undoc-members:
+  :show-inheritance:
+
+
 Indices and tables
 ==================
 
