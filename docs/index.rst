@@ -99,6 +99,14 @@ REST API tests repository Users
   :show-inheritance:
 
 
+REST API tests repository Users
+==================================
+.. automodule:: tests.test_route_auth
+  :members:
+  :undoc-members:
+  :show-inheritance:
+
+
 Indices and tables
 ==================
 
